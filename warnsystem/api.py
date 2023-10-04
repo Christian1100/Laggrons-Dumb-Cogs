@@ -1138,7 +1138,7 @@ class API:
                     await member.send(embed=user_e)
                     ban_appeals_timer = self.bot.get_cog("BanAppealsTimer")
                     if ban_appeals_timer:
-                        await ban_appeals_timer.send_ban_appeal_link(member)
+                        await ban_appeals_timer.send_ban_appeal_link(member, reason)
                 except (discord.errors.Forbidden, errors.UserNotFound):
                     modlog_e = (
                         await self.get_embeds(
